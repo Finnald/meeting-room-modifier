@@ -1,5 +1,3 @@
-# \[DRAFT\] SD \- Modifying access to meeting rooms
-
 ## Using the script
 
 1. Download the script and open PowerShell
