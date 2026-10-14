@@ -5,7 +5,7 @@ Write-Host "Please connect to ExchangeOnline using Connect-ExchangeOnline before
 # will search for the specific meeting room. $calendar line needed for bookin and resource delegates
 $search = Read-Host "Enter Meeting Room name"
 $room = Get-Mailbox "*$search*" -RecipientTypeDetails RoomMailbox
-$calendar = Get-CalendarProcessing -Identity $room.Identity
+$calendar = Get-CalendarProcessing -Identity $room[0].Identity
 
 # will show the object to the user first before modifying
 Get-CalendarProcessing -Identity $calendar.Identity | Select-Object `
