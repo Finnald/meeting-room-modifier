@@ -37,9 +37,9 @@ BookInPolicy and ResourceDelegates must separate each value with a comma.`n" -Fo
         $allrequestin = $calendar.AllRequestInPolicy
     }
 
-    [int]$allrequestout = Read-Host "AllRequestOutPolicy (1/0)"
+    [int]$allrequestout = Read-Host "AllRequestOutOfPolicy (1/0)"
     if ($allrequestout -eq "") {
-        $allrequestout = $calendar.AllRequestOutPolicy
+        $allrequestout = $calendar.AllRequestOutOfPolicy
     }
 
     # these two will split and trim the string input so it becomes an array
@@ -63,7 +63,7 @@ BookInPolicy and ResourceDelegates must separate each value with a comma.`n" -Fo
     Write-Host "Confirmation:
     AllBookInPolicy`t: $allbookin
     AllRequestInPolicy`t: $allrequestin
-    AllRequestOutPolicy`t: $allrequestout
+    AllRequestOutOfPolicy`t: $allrequestout
     BookInPolicy`t: $bookin
     ResourceDelegates`t: $resourcedelegates" -ForegroundColor Yellow
 
